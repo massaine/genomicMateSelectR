@@ -34,10 +34,10 @@ readDBdata<-function(phenotypeFile,metadataFile=NULL){
     meta<-possibly_read_csv(metadataFile,
                             na.strings = c("#VALUE!",NA,".",""," ","-","\""),
                             stringsAsFactors = F)
-    if(is.na(meta)){
-      meta<-possibly_read_csv(metadataFile,
-                              na.strings = c("#VALUE!",NA,".",""," ","-","\""),
-                              stringsAsFactors = F, skip=2) }
+#    if(is.na(meta)){
+#      meta<-possibly_read_csv(metadataFile,
+#                              na.strings = c("#VALUE!",NA,".",""," ","-","\""),
+#                              stringsAsFactors = F, skip=2) }
     meta %<>%
       dplyr::rename(programName=breedingProgramName,
                     programDescription=breedingProgramDescription,
