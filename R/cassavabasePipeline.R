@@ -24,11 +24,11 @@ readDBdata<-function(phenotypeFile,metadataFile=NULL){
   indata<-possibly_read_csv(phenotypeFile,
                             na.strings = c("#VALUE!",NA,".",""," ","-","\""),
                             stringsAsFactors = F)
-  if(is.na(indata)){
-    # if from Wizard page
-    indata<-possibly_read_csv(phenotypeFile,
-                              na.strings = c("#VALUE!",NA,".",""," ","-","\""),
-                              stringsAsFactors = F, skip=3) }
+#  if(is.na(indata)){
+#    # if from Wizard page
+#    indata<-possibly_read_csv(phenotypeFile,
+#                              na.strings = c("#VALUE!",NA,".",""," ","-","\""),
+#                              stringsAsFactors = F, skip=3) }
 
   if(!is.null(metadataFile)){
     meta<-possibly_read_csv(metadataFile,
